@@ -11,7 +11,7 @@ function Technology(props: TechnologyProps) {
         <div className="px-1 py-1 flex items-center gap-1 max-w-fit">
             <img
                 className="h-4"
-                src={"http://localhost:8080/images/icons/" + technology.iconPath}
+                src={`${import.meta.env.VITE_API_URL}/images/icons/${technology.iconPath}`}
                 alt={technology.name + " icon"}
             />
             <h4 className="text-stone-600">{technology.name}</h4>

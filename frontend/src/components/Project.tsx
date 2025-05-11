@@ -10,7 +10,8 @@ function Project(props: ProjectProps) {
 
     return (
         <div className="rounded-2xl overflow-hidden grid grid-rows-subgrid row-span-3 transition-all bg-white">
-            <img className="h-80 w-full object-cover" src={"http://localhost:8080/images/projects/" + project.imagePath}
+            <img className="h-80 w-full object-cover"
+                 src={`${import.meta.env.VITE_API_URL}/images/projects/${project.imagePath}`}
                  alt={project.imagePath}/>
             <div className="px-4 py-3 flex flex-col gap-1">
                 <div className="flex flex-row items-baseline gap-2">
