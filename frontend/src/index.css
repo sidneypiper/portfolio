@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-sans: "Poppins", "sans-serif";
+    --shadow-down: 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+    --shadow-down-lg: 0px 4px 6px 0px rgba(0, 0, 0, 0.25);
+    --animate-bounce-md: bounce-md 1s ease-in-out infinite;
+
+    --color-background: #fafafa;
+
+    @keyframes bounce-md {
+        0%, 100% {
+            transform: translateY(-12.5%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: none;
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+}
