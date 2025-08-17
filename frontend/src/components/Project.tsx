@@ -9,7 +9,7 @@ function Project(props: ProjectProps) {
     const project: ProjectInterface = props.project;
 
     return (
-        <div className="rounded-2xl overflow-hidden grid grid-rows-subgrid row-span-3 transition-all bg-white">
+        <div className="rounded-2xl overflow-hidden grid grid-rows-subgrid row-span-3 transition-all bg-white mb-8 sm:mb-12 md:mb-16 lg:mb-24">
             <img className="h-80 w-full object-cover"
                  src={`${import.meta.env.VITE_API_URL}/images/projects/${project.imagePath}`}
                  alt={project.imagePath}/>

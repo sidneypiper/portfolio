@@ -10,6 +10,8 @@
     --animate-bounce-md: bounce-md 1s ease-in-out infinite;
 
     --color-background: #fafafa;
+    --color-link: #2563eb;
+    --color-link-hover: #1d4ed8;
 
     @keyframes bounce-md {
         0%, 100% {

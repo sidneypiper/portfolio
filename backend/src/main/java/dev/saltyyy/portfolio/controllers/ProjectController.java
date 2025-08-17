@@ -23,7 +23,11 @@ public class ProjectController {
 
     @GetMapping
     public List<Project> getAllProjects() {
-        return projectRepository.findAll(Sort.by(Sort.Direction.DESC, "released"));
+        List<Project> projects = projectRepository.findAll(Sort.by(Sort.Direction.DESC, "released"));
+        for (Project project : projects) {
+            project.getTechnologies().sort((t1, t2) -> t1.getName().compareToIgnoreCase(t2.getName()));
+        }
+        return projects;
     }
 
 }
