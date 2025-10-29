@@ -25,7 +25,7 @@ function Project(props: ProjectProps) {
         <div
             className="rounded-2xl overflow-hidden grid grid-rows-subgrid row-span-3 transition-all bg-white mb-8 sm:mb-12 md:mb-16 lg:mb-24">
             {
-                project.title === "Portfolio" && iframeSrc
+                project.title === "Portfolio" && iframeSrc && window.matchMedia('(min-width: 1024px)').matches
                     ? <iframe src={iframeSrc}
                               title="portfolio-preview"
                               ref={iframe}
