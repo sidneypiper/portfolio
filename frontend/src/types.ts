@@ -2,7 +2,7 @@ interface ProjectInterface {
     title: string;
     description: string;
     imagePath: string;
-    released: number;
+    released: Date;
     technologies: TechnologyInterface[];
 }
 
