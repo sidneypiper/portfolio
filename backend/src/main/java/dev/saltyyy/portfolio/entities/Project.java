@@ -2,6 +2,7 @@ package dev.saltyyy.portfolio.entities;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -15,7 +16,7 @@ public class Project {
     @Column(columnDefinition = "TEXT")
     private String description;
     private String imagePath;
-    private Integer released;
+    private Date released;
 
     @ManyToMany(cascade = CascadeType.ALL)
     private List<Technology> technologies;
@@ -23,12 +24,12 @@ public class Project {
     public Project() {
     }
 
-    public Project(String title, String description, List<Technology> technologies, String imagePath, Integer year) {
+    public Project(String title, String description, List<Technology> technologies, String imagePath, Date released) {
         this.title = title;
         this.description = description;
         this.technologies = technologies;
         this.imagePath = imagePath;
-        this.released = year;
+        this.released = released;
     }
 
     public String getTitle() {
@@ -63,11 +64,11 @@ public class Project {
         this.imagePath = imagePath;
     }
 
-    public Integer getReleased() {
+    public Date getReleased() {
         return released;
     }
 
-    public void setReleased(Integer released) {
+    public void setReleased(Date released) {
         this.released = released;
     }
 }
